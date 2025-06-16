@@ -1,0 +1,415 @@
+:root {
+  --primary-color: #1687fa;
+  --secondary-color: #5BB318;
+  --dark-bg: #181A1B;
+  --card-bg: #232629;
+  --text-light: #FFFFFF;
+  --text-gray: #BDBDBD;
+  --success-color: #4CAF50;
+  --error-color: #F44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--dark-bg);
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#wallet-status {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.wallet-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Контент */
+.content {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: var(--text-gray);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+.ton-bg {
+  background-color: rgba(22, 135, 250, 0.2);
+  color: var(--primary-color);
+}
+
+.rub-bg {
+  background-color: rgba(91, 179, 24, 0.2);
+  color: var(--secondary-color);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  color: var(--text-gray);
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #0d6efd;
+}
+
+.secondary-btn {
+  background-color: #333;
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Партнерская программа */
+.referral-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 25px;
+}
+
+.referral-percent {
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.referral-percent span {
+  font-size: 48px;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.referral-stats {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat-item {
+  flex: 1;
+  background-color: #2c2f31;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.stat-item span {
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.referral-link {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#ref-link-input {
+  flex: 1;
+  background-color: #2c2f31;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: white;
+  font-size: 14px;
+}
+.widget-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.widget-image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card .widget-image {
+  max-height: 120px;
+  margin-bottom: 15px;
+}
+
+.modal-content .widget-image {
+  max-height: 150px;
+}
+
+/* Навигация */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: #222426;
+  border-top: 1px solid #333;
+  padding: 10px 0;
+}
+
+.nav-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.nav-btn.active {
+  color: var(--primary-color);
+}
+
+.nav-btn .material-icons {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+/* Модальные окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  animation: modalIn 0.3s;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1e2021;
+  color: white;
+  font-size: 16px;
+}
+
+.price-display {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px;
+  background-color: #1e2021;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.wallet-connect {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.wallet-connect p {
+  margin-bottom: 15px;
+  color: var(--text-gray);
+}
+
+.wallet-btn {
+  margin: 5px;
+}
+
+/* Уведомления */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+.notification.success {
+  background-color: var(--success-color);
+}
+
+.notification.error {
+  background-color: var(--error-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .referral-stats {
+    flex-direction: column;
+  }
+}
